@@ -20,7 +20,7 @@ public class xsltTransform {
 		Transformer transformer = factory.newTransformer(xsltFile);
 		transformer.transform(inputFile, new StreamResult(new File(currentDirectory + "/src/output.xml")));
 
-		
 	}
+
 
 }
