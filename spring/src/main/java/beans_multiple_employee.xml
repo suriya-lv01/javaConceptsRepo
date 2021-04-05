@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="employee" class="com.spring.multiplebeans.Employee">
+		<property name="empName" value="Sekar" />
+		<property name="designation" value="Team Lead" />
+		<!-- <property name="salary" ref="Salary" /> -->
+		<property name="salary">
+			<bean id="Salary" class="com.spring.multiplebeans.Salary">
+				<property name="basePay" value="10000" />
+				<property name="allowances" value="500" />
+				<property name="netPay" value="10500" />
+			</bean>
+		</property>
+	</bean>
+
+	<!-- <import resource="beans_multiple_salary.xml" /> -->
+</beans>
