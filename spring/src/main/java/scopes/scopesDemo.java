@@ -7,9 +7,14 @@ public class scopesDemo {
 
 	public static void main(String args[]) {
 
-		ApplicationContext context = new ClassPathXmlApplicationContext("/scopes/bean_scopes.xml");
-		Employee employee1 = (Employee) context.getBean("employee");
-		Employee employee2 = (Employee) context.getBean("employee");
+//		Singleton Scope
+//		ApplicationContext context = new ClassPathXmlApplicationContext("/scopes/bean_singleton.xml");
+		
+//		Prototype Scope
+		ApplicationContext context = new ClassPathXmlApplicationContext("/scopes/bean_prototype.xml");
+		
+		Employee employee1 = (Employee) context.getBean("employee1");
+		Employee employee2 = (Employee) context.getBean("employee2");
 		System.out.println(employee1);
 		employee1.getSalary().setAllowance(200);
 		System.out.println(employee2);
