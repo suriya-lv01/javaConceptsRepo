@@ -1,4 +1,4 @@
-package com.ioc;
+package ioc;
 
 public interface RecordType {
 

@@ -1,4 +1,4 @@
-package com.di.collections;
+package di_collections;
 
 import java.util.Map;
 import java.util.Properties;

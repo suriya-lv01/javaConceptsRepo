@@ -1,4 +1,4 @@
-package com.spring.multiplebeans;
+package multiplebeans;
 
 public class Salary {
 	

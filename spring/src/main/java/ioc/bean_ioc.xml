@@ -4,12 +4,11 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
    http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="employee" class="autowiring.Employee" autowire="byType">
-		<property name="empName" value="sam" />
+	<bean id="employee" class="ioc.Employee"></bean>
+	<bean id="student" class="ioc.Student"></bean>
+	<bean id="accessRecord" class="ioc.AccessRecord">
+		<property name="recordType" ref="employee" />
 	</bean>
 
-	<bean id="salar" class="autowiring.Salary">
-		<property name="totalSalary" value="1000" />
-	</bean>
 
 </beans>

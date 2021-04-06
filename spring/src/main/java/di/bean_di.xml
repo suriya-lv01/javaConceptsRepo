@@ -4,11 +4,10 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
    http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="employee" class="com.ioc.Employee"></bean>
-	<bean id="student" class="com.ioc.Student"></bean>
-	<bean id="accessRecord" class="com.ioc.AccessRecord">
-		<property name="recordType" ref="student" />
+	<bean id="employee" class="di.Employee">
+		<property name="empName" value="sam" />
+		<property name="basicpay" value="10000" />
+		<constructor-arg index="0" value="5000" />
 	</bean>
-
 
 </beans>

@@ -1,4 +1,4 @@
-package com.spring;
+package spring;
 
 public class Employee {
 	private String name;

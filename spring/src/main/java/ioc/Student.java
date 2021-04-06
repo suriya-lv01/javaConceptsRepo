@@ -1,4 +1,4 @@
-package com.ioc;
+package ioc;
 
 public class Student implements RecordType {
 

@@ -4,10 +4,14 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
    http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="employee" class="com.di.Employee">
+	<bean id="employee" class="scopes.Employee">
 		<property name="empName" value="sam" />
-		<property name="basicpay" value="10000" />
-		<constructor-arg index="0" value="5000" />
+		<property name="salary" ref="salary"/>
+	</bean>
+
+	<bean id="salary" class="scopes.Salary" scope="singleton">
+		<property name="baseSalary" value="1000" />
+		<property name="allowance" value="500" />
 	</bean>
 
 </beans>

@@ -4,7 +4,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
    http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="employee" class="com.di.collections.Employee">
+	<bean id="employee" class="di_collections.Employee">
 		<property name="empName" value="sam" />
 		<property name="doj">
 			<props>

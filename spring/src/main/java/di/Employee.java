@@ -1,4 +1,4 @@
-package com.di;
+package di;
 
 public class Employee {
 

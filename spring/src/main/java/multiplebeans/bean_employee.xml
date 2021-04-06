@@ -4,12 +4,12 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
    http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="employee" class="com.spring.multiplebeans.Employee">
+	<bean id="employee" class="multiplebeans.Employee">
 		<property name="empName" value="Sekar" />
 		<property name="designation" value="Team Lead" />
-		<!-- <property name="salary" ref="Salary" /> -->
+
 		<property name="salary">
-			<bean id="Salary" class="com.spring.multiplebeans.Salary">
+			<bean id="Salary" class="multiplebeans.Salary">
 				<property name="basePay" value="10000" />
 				<property name="allowances" value="500" />
 				<property name="netPay" value="10500" />
@@ -17,5 +17,4 @@
 		</property>
 	</bean>
 
-	<!-- <import resource="beans_multiple_salary.xml" /> -->
 </beans>

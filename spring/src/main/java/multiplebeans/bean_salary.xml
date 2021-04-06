@@ -4,7 +4,7 @@
    xsi:schemaLocation="http://www.springframework.org/schema/beans
    http://www.springframework.org/schema/beans/spring-beans.xsd">
 
- <bean id="Salary" class="com.spring.multiplebeans.Salary">
+ <bean id="Salary" class="multiplebeans.Salary">
     <property name="basePay" value="10000"/>
     <property name="allowances" value="500"/>
     <property name="netPay" value="10500"/>
