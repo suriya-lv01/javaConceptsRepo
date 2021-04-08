@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="employee" class="di_collections.Employee">
+		<property name="empName" value="sam" />
+		<property name="doj">
+			<props>
+				<prop key="day">25</prop>
+				<prop key="month">2</prop>
+				<prop key="year">2021</prop>
+			</props>
+		</property>
+		<property name="salaryDetails">
+			<map>
+				<entry key="basicSalary" value="1000" />
+				<entry key="allowance" value="500" />
+			</map>
+		</property>
+		<property name="techStack">
+			<set>
+				<value>Java</value>
+				<value>Aws</value>
+				<value>Mulesoft</value>
+			</set>
+		</property>
+	</bean>
+
+</beans>

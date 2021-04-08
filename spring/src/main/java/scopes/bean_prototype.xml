@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="employee1" class="scopes.Employee">
+		<property name="empName" value="sam" />
+		<property name="salary" ref="salary" />
+	</bean>
+
+	<bean id="employee2" class="scopes.Employee">
+		<property name="empName" value="sam" />
+		<property name="salary" ref="salary" />
+	</bean>
+
+	<bean id="salary" class="scopes.Salary" scope="prototype">
+		<property name="baseSalary" value="1000" />
+		<property name="allowance" value="500" />
+	</bean>
+
+</beans>
