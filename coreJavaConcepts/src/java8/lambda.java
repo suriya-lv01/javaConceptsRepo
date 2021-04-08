@@ -21,8 +21,8 @@ public class lambda {
 		numArray.add(3);
 		numArray.add(5);
 
-			// Simple Lambda expression at work
-			numArray.forEach((a) -> System.out.println(a));
+		// Simple Lambda expression at work
+		numArray.forEach((a) -> System.out.println(a));
 
 		// Saving Lambda expression to a variable
 		// variable's type needs to be an interface with only one method. Example :
@@ -30,10 +30,10 @@ public class lambda {
 		Consumer<Integer> lambdaVariable = (b) -> System.out.println(b);
 		numArray.forEach(lambdaVariable);
 
-			// Using lambda function in a method
-			// Method needs to have a parameter , with a single method Interface as its type
-			StringFunction addquestion = (s) -> s + "?";
-			printFormatted("Hello", addquestion);
+		// Using lambda function in a method
+		// Method needs to have a parameter , with a single method Interface as its type
+		StringFunction addquestion = (s) -> s + "?";
+		printFormatted("Hello", addquestion);
 
 	}
 
