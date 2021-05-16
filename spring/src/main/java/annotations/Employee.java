@@ -8,14 +8,15 @@ public class Employee implements InitializingBean {
 
 	private int empNo;
 	private String empName;
-	@Autowired(required=false)
+	@Autowired(required = false)
 	private Salary salary;
 
-	//Any properties Autowired via a constructor need to be mandatorily defined in bean xml
+	// Any properties Autowired via a constructor need to be mandatorily defined in
+	// bean xml
 	@Autowired
-	public Employee(int empNo, String empName) {
+	public Employee(int empNo,String empName) {
 		this.empNo = empNo;
-		this.empName = empName;
+		this.empName=empName;
 
 	}
 
@@ -32,7 +33,8 @@ public class Employee implements InitializingBean {
 		return "Employee [empNo=" + empNo + ", empName=" + empName + ", salary=" + salary + "]";
 	}
 
-	//This will throw exception if all properties in constructor are not defined in bean xml
+	// This will throw exception if all properties in constructor are not defined in
+	// bean xml
 	@Override
 	public void afterPropertiesSet() throws Exception {
 		// TODO Auto-generated method stub

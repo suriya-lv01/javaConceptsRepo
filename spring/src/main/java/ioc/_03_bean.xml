@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- bean instantiation using object factory method -->
+	<!-- <bean id="carFactory" class="org.springframework.beans.factory.config.MethodInvokingFactoryBean"> 
+		<property name="staticMethod" value="ioc._03_CarFactory.getSCar" /> <property 
+		name="arguments"> <list> <value>ioc._03_Audi</value> </list> </property> 
+		</bean> <bean id='myCar' class="carFactory" factory-method="getSCar" /> -->
+
+	<!-- bean instantiation using object factory method -->
+	<bean id="carFactoryObject" class="ioc._03_CarFactory">
+		<property name="carName">
+			<value>ioc._03_Audi</value>
+		</property>
+	</bean>
+	<bean id="carObj" factory-bean="carFactoryObject"
+		factory-method="getCar"></bean>
+
+
+</beans>

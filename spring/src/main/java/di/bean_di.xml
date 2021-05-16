@@ -5,9 +5,11 @@
    http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<bean id="employee" class="di.Employee">
-		<property name="empName" value="sam" />
+		<!-- <property name="empName" value="sam" /> -->
 		<property name="basicpay" value="10000" />
-		<constructor-arg index="0" value="5000" />
+		<!-- <constructor-arg index="0" value="5000" />  -->
+		<constructor-arg value="1000" type="double"></constructor-arg>
+		<constructor-arg value="Raj" type="String"></constructor-arg>
 	</bean>
 
 </beans>
