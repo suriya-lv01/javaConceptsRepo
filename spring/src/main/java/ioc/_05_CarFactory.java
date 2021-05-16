@@ -2,7 +2,7 @@ package ioc;
 
 import org.springframework.beans.factory.FactoryBean;
 
-public class _04_CarFactory implements FactoryBean{
+public class _05_CarFactory implements FactoryBean{
 	
 	private String carName;
 	
@@ -17,14 +17,14 @@ public class _04_CarFactory implements FactoryBean{
 	@Override
 	public Object getObject() throws Exception {
 		// TODO Auto-generated method stub
-		_04_Car car=(_04_Car)Class.forName(carName).newInstance();
+		_05_Car car=(_05_Car)Class.forName(carName).newInstance();
 		return car;
 	}
 
 	@Override
 	public Class getObjectType() {
 		// TODO Auto-generated method stub
-		return _04_Car.class;
+		return _05_Car.class;
 	}
 	
 	@Override

@@ -1,6 +1,6 @@
 package ioc;
 
-public class _04_Audi implements _04_Car {
+public class _05_Audi implements _05_Car {
 
 	@Override
 	public void drive() {

@@ -1,6 +1,6 @@
 package ioc;
 
-public interface _04_Car {
+public interface _05_Car {
 
 	public void drive();
 

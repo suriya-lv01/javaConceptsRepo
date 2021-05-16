@@ -5,8 +5,8 @@
    http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<!-- bean instantiation using FactoryBean Interface getObject method -->
-	<bean id="carFactoryObj" class="ioc._04_CarFactory">
-		<property name="carName" value="ioc._04_Audi"/>
+	<bean id="carFactoryObj" class="ioc._05_CarFactory">
+		<property name="carName" value="ioc._05_Audi"/>
 	</bean>
 
 </beans>
