@@ -3,9 +3,17 @@ package com.example.hibernateORM;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+import org.hibernate.annotations.Table;
+
 //POJO Class
-@Entity
+@Entity(name="Alien_Table")
+@Table(appliesTo="Alien_Table")
 public class Alien {
+
+	@Override
+	public String toString() {
+		return "Alien [alienId=" + alienId + ", aName=" + aName + ", color=" + color + "]";
+	}
 
 	@Id
 	private int alienId;
