@@ -1,4 +1,4 @@
-package com.example.hibernateORM;
+package hibernateORM;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
