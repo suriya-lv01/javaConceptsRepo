@@ -21,7 +21,7 @@ public class DemoMappingRelations {
 
 		l.getStudent().add(s);
 
-		Configuration con = new Configuration().configure().addAnnotatedClass(Student.class)
+		Configuration con = new Configuration().configure("hbm_mapping.cfg.xml").addAnnotatedClass(Student.class)
 				.addAnnotatedClass(Laptop.class);
 		StandardServiceRegistry reg = new StandardServiceRegistryBuilder().applySettings(con.getProperties()).build();
 		SessionFactory sf = con.buildSessionFactory(reg);

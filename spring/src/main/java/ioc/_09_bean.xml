@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans.xsd"
+	default-init-method="customInit" default-destroy-method="customDestroy">
+
+	<!-- define properties file using PropertyPlaceholderConfigurer -->
+	<bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location" value="resources/file.properties" />
+	</bean>
+
+	<!-- using above property file configuration to inject properties into a 
+		bean -->
+	<bean id="pi" class="ioc._09_PropertiesImpl">
+		<property name="propName" value="${name}" />
+		<property name="propValue" value="${value}" />
+	</bean>
+
+
+
+</beans>

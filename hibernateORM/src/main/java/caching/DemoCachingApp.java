@@ -15,7 +15,7 @@ public class DemoCachingApp {
 		alien1.setColor("jade");
 
 		//addAnnotatedClass - to specify which entity we are working with
-		Configuration con = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Alien.class);
+		Configuration con = new Configuration().configure("hbm_caching.cfg.xml").addAnnotatedClass(Alien.class);
 		
 		ServiceRegistry reg = new StandardServiceRegistryBuilder().applySettings(con.getProperties()).build();
 		SessionFactory sf = con.buildSessionFactory(reg);
@@ -23,16 +23,16 @@ public class DemoCachingApp {
 		//Session 1 fetches data
 		Session session1 = sf.openSession();
 		session1.beginTransaction();
-		//session1.save(alien1);
+		session1.save(alien1);
 		Alien a = session1.get(Alien.class,101);
-		System.out.println(a);
+		System.out.println("session 1 output:"+a);
 		session1.getTransaction().commit();
 		session1.close();
 
 		Session session2 = sf.openSession();		
 		session2.beginTransaction();
 		Alien b = session2.get(Alien.class,101);
-		System.out.println(b);
+		System.out.println("session 2 output:"+b);
 		session2.getTransaction().commit();
 		session2.close();
 		
@@ -42,7 +42,7 @@ public class DemoCachingApp {
 		Query q3=session3.createQuery("from Alien_Table where alienId=101");
 		q3.setCacheable(true);
 		Alien a3 = (Alien) q3.uniqueResult();
-		System.out.println(a3);
+		System.out.println("session 3 output:"+a3);
 		session3.getTransaction().commit();
 		session3.close();
 	
@@ -51,7 +51,7 @@ public class DemoCachingApp {
 		Query q4=session4.createQuery("from Alien_Table where alienId=101");
 		q4.setCacheable(true);
 		Alien a4 = (Alien) q4.uniqueResult();
-		System.out.println(a4);
+		System.out.println("session 4 output:"+a4);
 		session4.getTransaction().commit();
 		session4.close();
 		
