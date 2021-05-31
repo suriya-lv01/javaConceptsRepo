@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans.xsd"
+	default-init-method="customInit" default-destroy-method="customDestroy">
+
+	<!-- Implementing Lookup method of an interface -->
+	<bean id="ilm" class="ioc._08_LookupMethodForInterface">
+		<lookup-method name="myEngine" bean="carEngine" />
+	</bean>
+	<bean id="carEngine" class="ioc._08_Engine">
+		<property name="engineName" value="CarEngine"/>
+	</bean>
+	
+	
+	<!-- Implementing Lookup method of an abstract class -->
+	<bean id="lmac" class="ioc._08_LookupMethodForAbstractClass">
+		<lookup-method name="myEngine" bean="BusEngine" />
+	</bean>
+	<bean id="BusEngine" class="ioc._08_Engine">
+		<property name="engineName" value="BusEngine"/>
+	</bean>
+
+	<!-- Implementing Lookup method of a concrete class -->
+	<bean id="lmcc" class="ioc._08_LookupMethodForConcreteClass">
+		<lookup-method name="myEngine" bean="TruckEngine" />
+	</bean>
+	<bean id="TruckEngine" class="ioc._08_Engine">
+		<property name="engineName" value="TruckEngine"/>
+	</bean>
+
+</beans>

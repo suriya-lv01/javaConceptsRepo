@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="DataCollectionBean" class="di_collections.DataCollection">
+		<property name="fruits">
+			<list>
+				<value>Apple</value>
+				<value>Orange</value>
+			</list>
+		</property>
+		<property name="cricketers">
+			<set>
+				<value>Sehwag</value>
+				<value>Sachin</value>
+				<value>Sachin</value>
+			</set>
+		</property>
+		<property name="countryCapital">
+			<map>
+				<entry key="India" value="Delhi"></entry>
+				<entry key="SriLanka" value="Colombo"></entry>
+			</map>
+		</property>
+	</bean>
+
+</beans>

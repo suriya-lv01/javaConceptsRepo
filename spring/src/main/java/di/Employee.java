@@ -7,9 +7,23 @@ public class Employee {
 	private double allowances;
 	private double netpay;
 	
+	Employee(){		
+		System.out.println("Default constructor called");;		
+	}
+	
 	Employee(double allowances){		
 		this.allowances=allowances;		
 	}
+	
+	Employee(String empName){		
+		this.empName=empName;		
+	}
+	
+	Employee(double allowances,String empName){		
+		this.allowances=allowances;	
+		this.empName=empName;		
+	}
+	
 	public String getEmpName() {
 		return empName;
 	}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- bean instantiation using FactoryBean Interface getObject method -->
+	<bean id="carFactoryObj" class="ioc._05_CarFactory">
+		<property name="carName" value="ioc._05_Audi"/>
+	</bean>
+
+</beans>
